@@ -39,10 +39,18 @@ export class EmployeeService {
 
     async findOne(employeeId: number): Promise<Employee> {
 
-        return await this.employeeRepository.findOne({
-            where: { id: employeeId },
-            relations: { contactInfor: true, tasks: true, meetings: true }
-        })
+        return await this.employeeRepository.findOne(
+            {
+                where: { id: employeeId },
+
+                relations:
+                {
+                    contactInfor: true,
+                    tasks: true,
+                    meetings: true
+                }
+            }
+        )
 
     }
 

@@ -7,17 +7,11 @@ import { Employee } from '../employee/entities/employee.entity';
 
 @Module({
 
-  imports: [
-    TypeOrmModule.forFeature([Meeting, Employee])
-  ],
+  imports: TypeOrmModule.forFeature([Meeting, Employee]),
 
-  controllers: [
-    MeetingController
-  ],
+  controllers: [MeetingController],
 
-  providers: [
-    MeetingService
-  ]
+  providers: [MeetingService]
 
 })
 export class MeetingModule { }

@@ -6,19 +6,11 @@ import { ContactInfor } from './entities/contact-infor.entity';
 
 @Module({
 
-  imports: [
+  imports: [TypeOrmModule.forFeature([ContactInfor])],
 
-    TypeOrmModule.forFeature([ContactInfor])
+  controllers: [ContactInforController],
 
-  ],
-
-  controllers: [
-    ContactInforController
-  ],
-
-  providers: [
-    ContactInforService
-  ]
+  providers: [ContactInforService]
 
 })
 export class ContactInforModule { }

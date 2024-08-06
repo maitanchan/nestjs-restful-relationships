@@ -7,17 +7,11 @@ import { Employee } from '../employee/entities/employee.entity';
 
 @Module({
 
-  imports: [
-    TypeOrmModule.forFeature([Task, Employee])
-  ],
+  imports: [TypeOrmModule.forFeature([Task, Employee])],
 
-  controllers: [
-    TaskController
-  ],
+  controllers: [TaskController],
 
-  providers: [
-    TaskService
-  ]
+  providers: [TaskService]
 
 })
 export class TaskModule { }

@@ -10,13 +10,11 @@ import { MeetingModule } from './meeting/meeting.module';
   imports: [
 
     TypeOrmModule.forRoot({
-
       type: 'sqlite',
       database: './db',
       entities: ['dist/**/*.entity{.ts,.js}'],
       synchronize: true,
       logging: true
-
     }),
 
     EmployeeModule,
